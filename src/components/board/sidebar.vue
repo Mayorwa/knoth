@@ -35,7 +35,7 @@
                     </div>
                     <div class="sidebar__text">overview</div>
                 </a>
-                <a href="/board/links" :class="routeName === 'transactions' ? 'active' : ''" class="sidebar__item">
+                <a href="/board/links" :class="routeName === 'board-links' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                             <use xlink:href="/sprite.svg#icon-link"/>
@@ -46,7 +46,7 @@
             </nav>
             <div class="sidebar__caption">account<span> settings</span></div>
             <nav class="sidebar__nav">
-                <a href="/board/notification" :class="routeName === 'order' ? 'active' : ''" class="sidebar__item">
+                <a href="/board/notifications" :class="routeName === 'board-notifications' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                             <use xlink:href="/sprite.svg#icon-notification"/>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="sidebar__text">notifications</div>
                 </a>
-                <a href="/services" :class="routeName === 'services' ? 'active' : ''" class="sidebar__item">
+                <a href="/board/plan" :class="routeName === 'board-plan' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                             <use xlink:href="/sprite.svg#icon-services"/>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="sidebar__text">plans & pricing</div>
                 </a>
-                <a href="/board/settings" :class="routeName === 'board-settings' ? 'active' : ''" class="sidebar__item">
+                <a href="/board/settings" :class="routeName === 'board-settings' ? 'active' : ''" class="sidebar__item" title="settings">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                             <use xlink:href="/sprite.svg#icon-settings"/>
