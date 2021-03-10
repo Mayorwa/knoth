@@ -12,6 +12,26 @@ const routes = [
         name: 'board-overview',
         component: () => import("@/views/board/overview.vue"),
       },
+      {
+        path: 'links',
+        name: 'board-links',
+        component: () => import("@/views/board/links.vue"),
+      },
+      {
+        path: 'notifications',
+        name: 'board-notifications',
+        component: () => import("@/views/board/notification.vue"),
+      },
+      {
+        path: 'plan',
+        name: 'board-plan',
+        component: () => import("@/views/board/plan.vue"),
+      },
+      {
+        path: 'settings',
+        name: 'board-settings',
+        component: () => import("@/views/board/settings.vue"),
+      },
     ]
   },
 ];
