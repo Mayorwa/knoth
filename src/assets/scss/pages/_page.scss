@@ -1,3 +1,216 @@
 .page {
     overflow: hidden;
 }
+
+.page__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-left: 255px;
+    -webkit-transition: padding .2s;
+    -o-transition: padding .2s;
+    transition: padding .2s;
+    @include respond-to('desktop-bp'){
+        padding-left: 96px;
+    }
+    @include respond-to('desktop-l'){
+        padding-left: 0;
+        -webkit-transition: -webkit-transform .2s;
+        transition: -webkit-transform .2s;
+        -o-transition: transform .2s;
+        transition: transform .2s;
+        transition: transform .2s, -webkit-transform .2s;
+    }
+}
+
+.page.toggle .page__content {
+    -webkit-transform: translateX(255px);
+    -ms-transform: translateX(255px);
+    transform: translateX(255px);
+}
+
+.page__container {
+    padding: 64px;
+    @include respond-to('desktop-xxl'){
+        padding: 64px 48px;
+    }
+    @include respond-to('desktop-xl'){
+        padding: 64px;
+    }
+    @include respond-to('lg-mobile'){
+        padding: 32px 16px;
+    }
+}
+
+.page.wide .page__content,
+.page.full .page__content {
+    padding-left: 96px;
+}
+
+.page.full.wide .page__content {
+    padding-left: 96px;
+}
+
+.page__head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+    .button{
+        padding: 10px 20px;
+        font-size: 16px;
+        display: flex;
+        font-weight: normal;
+        svg g [fill]{
+            fill: $white;
+        }
+        span{
+            margin-left: 10px;
+        }
+    }
+}
+
+.page_description{
+    margin-bottom: 15px;
+    @include respond-to('lg-mobile'){
+        font-size: 14px;
+    }
+}
+
+.page__hr{
+    margin-bottom: 38px;
+    border-top: transparent;
+}
+
+.page__title{
+    font-weight: bold;
+}
+
+.tb__table {
+    display: table;
+    width: 100%;
+    padding: 0 10px 20px;
+    @include respond-to('desktop-l'){
+        width: 860px;
+        margin-bottom: 20px;
+    }
+}
+
+.tb__container{
+    overflow: auto;
+    &::-webkit-scrollbar {
+        height: 10px;
+        background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #E4E4E4;
+        border-radius: 10px;
+    }
+    @include respond-to('desktop-l'){
+        display: flex;
+        margin: 0 -64px;
+    }
+    @include respond-to('lg-mobile') {
+        margin: 0 -16px;
+    }
+}
+
+.tb__row {
+    display: table-row;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    color: #11142D;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.tb__row:nth-child(2n+1) {
+    background: rgba(228, 228, 228, 0.2);
+}
+
+.tb__row:not(.tb__row_head):hover {
+    background: none;
+    -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+.tb__cell {
+    display: table-cell;
+    vertical-align: middle;
+    height: 72px;
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+    padding: 10px 20px;
+}
+
+.tb__description{
+    white-space: normal;
+    p{
+        width: 400px;
+        font-size: 15px;
+        line-height: 1.05;
+    }
+}
+
+.tb__cell:last-child {
+    padding-right: 16px;
+    border-radius: 0 12px 12px 0;
+}
+
+.tb__row_head .tb__cell {
+    height: 40px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #808191;
+}
+
+.tb__row_head .tb__cell:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.tb__row_head .tb__cell:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.tb__btns {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .button{
+        display: flex;
+        height: fit-content;
+        padding: 10px 20px;
+        font-size: 14px;
+        align-items: center;
+        .icon{
+            margin-right: 5px;
+            & g [fill]{
+                fill: $white;
+            }
+        }
+        &:first-child{
+            margin-right: 10px;
+        }
+    }
+}
