@@ -30,7 +30,7 @@
                 <a href="/board/overview" :class="routeName === 'board-overview' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                            <use xlink:href="/sprite.svg#icon-analytics"/>
+                            <use xlink:href="/sprite.svg#icon-analytics"></use>
                         </svg>
                     </div>
                     <div class="sidebar__text">overview</div>
@@ -38,7 +38,7 @@
                 <a href="/board/links" :class="routeName === 'board-links' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                            <use xlink:href="/sprite.svg#icon-link"/>
+                            <use xlink:href="/sprite.svg#icon-link"></use>
                         </svg>
                     </div>
                     <div class="sidebar__text">links</div>
@@ -49,7 +49,7 @@
                 <a href="/board/notifications" :class="routeName === 'board-notifications' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                            <use xlink:href="/sprite.svg#icon-notification"/>
+                            <use xlink:href="/sprite.svg#icon-notification"></use>
                         </svg>
                     </div>
                     <div class="sidebar__text">notifications</div>
@@ -57,7 +57,7 @@
                 <a href="/board/plan" :class="routeName === 'board-plan' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                            <use xlink:href="/sprite.svg#icon-services"/>
+                            <use xlink:href="/sprite.svg#icon-services"></use>
                         </svg>
                     </div>
                     <div class="sidebar__text">plans & pricing</div>
@@ -65,7 +65,7 @@
                 <a href="/board/settings" :class="routeName === 'board-settings' ? 'active' : ''" class="sidebar__item" title="settings">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                            <use xlink:href="/sprite.svg#icon-settings"/>
+                            <use xlink:href="/sprite.svg#icon-settings"></use>
                         </svg>
                     </div>
                     <div class="sidebar__text">settings</div>
@@ -73,18 +73,40 @@
             </nav>
         </div>
         <div class="sidebar__bottom">
-            <a class="sidebar__item" href="https://github.com/Mayorwa" target="_blank">
-                <div class="sidebar__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <rect x="0" y="0" width="24" height="24"/>
-                            <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"/>
-                            <path d="M12.4208204,17.1583592 L15.4572949,11.0854102 C15.6425368,10.7149263 15.4923686,10.2644215 15.1218847,10.0791796 C15.0177431,10.0271088 14.9029083,10 14.7864745,10 L12,10 L12,7.17705098 C12,6.76283742 11.6642136,6.42705098 11.25,6.42705098 C10.965921,6.42705098 10.7062236,6.58755277 10.5791796,6.84164079 L7.5427051,12.9145898 C7.35746316,13.2850737 7.50763142,13.7355785 7.87811529,13.9208204 C7.98225687,13.9728912 8.09709167,14 8.21352549,14 L11,14 L11,16.822949 C11,17.2371626 11.3357864,17.572949 11.75,17.572949 C12.034079,17.572949 12.2937764,17.4124472 12.4208204,17.1583592 Z" fill="#000000"/>
-                        </g>
-                    </svg>
+            <div class="sidebar__profile">
+                <div class="sidebar__details">
+                    <a class="sidebar__link" href="#">
+                        <div class="sidebar__icon">
+                            <svg class="icon icon-profile">
+                                <use xlink:href="img/sprite.svg#icon-profile"></use>
+                            </svg>
+                        </div>
+                        <div class="sidebar__text">Profile</div>
+                    </a>
+                    <a class="sidebar__link" href="#">
+                        <div class="sidebar__icon">
+                            <svg class="icon icon-logout">
+                                <use xlink:href="img/sprite.svg#icon-logout"></use>
+                            </svg>
+                        </div>
+                        <div class="sidebar__text">Log out</div>
+                    </a>
                 </div>
-                <div class="sidebar__text">made by group 1</div>
-            </a>
+                <a class="sidebar__user" href="#">
+                    <div class="sidebar__ava">
+                        <img class="sidebar__pic" src="@/assets/img/avatar/ava-5.png" alt="">
+                    </div>
+                    <div class="sidebar__desc">
+                        <div class="sidebar__man">david</div>
+                        <div class="sidebar__status caption">Free account</div>
+                    </div>
+                    <div class="sidebar__arrow">
+                        <svg class="icon" width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
+                            <use xlink:href="/sprite.svg#icon-angle-double-v"></use>
+                        </svg>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </template>
@@ -104,13 +126,12 @@
                 sidebar = $('.sidebar'),
                 headerToggle = $('.header__toggle'),
                 logo = $('.header__logo'),
-                close = $('.sidebar__close');
+                close = $('.sidebar__close'),
+                sidebar__user = $('.sidebar__user'),
+                sidebar__detail = $('.sidebar__details');
             toggle.on('click', function () {
                 sidebar.toggleClass('active');
                 page.toggleClass('wide');
-                setTimeout(function () {
-                    $('.owl-carousel').trigger('refresh.owl.carousel');
-                }, 200);
             });
 
             headerToggle.on('click', function () {
@@ -128,6 +149,10 @@
                 $('body').removeClass('no-scroll');
                 $('html').removeClass('no-scroll');
             });
+            sidebar__user.on('click', function () {
+                sidebar__user.toggleClass('active');
+                sidebar__detail.toggleClass('show');
+            })
         }
     }
 </script>

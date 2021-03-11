@@ -532,18 +532,40 @@
     @include respond-to('desktop-xl'){
         padding: 48px 48px 36px;
     }
+    &__add{
+        .icon{
+            color: $green-3;
+        }
+    }
 }
 
-.header__logo {
-    display: none;
-    margin:0 auto;
+.header__profile{
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    svg{
+        width: 15px;
+        height: 15px;
+        //color: #2c4ed6;
+    }
+}
+.header__profile-img{
+    display: flex;
+    overflow: hidden;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #FFFFFF;
 }
 
-.header__logo img {
-    width: 60px;
+.header__profile-img img {
+    width: 38px;
 }
 
-.header__logo.hidden {
+.header__profile-img.hidden {
     visibility: hidden;
     opacity: 0;
 }
@@ -551,31 +573,24 @@
 @include respond-to('desktop-l'){
     .header {
         display: flex;
-        padding: 32px 64px;
+        padding: 10px 64px;
     }
-    .header__logo {
-        display: inline-block;
-    }
-    .header__indicator {
-        display: none;
-    }
-    .header__toggle {
-        display: inline-block;
+    .header__profile-img {
+        display: flex;
     }
 }
 
 @include respond-to('lg-mobile'){
     .header {
-        padding: 24px 16px;
-        display: none;
+        padding: 10px 16px;
     }
-    .header__logo img {
-        width: 46px;
+}
+
+.border{
+    &__blue{
+        border: 2px solid #2c4ed6;
     }
-    .header__icon {
-        margin-right: 16px;
-    }
-    .header__toggle {
-        margin: 0;
+    &__green{
+        border: 2px solid #7fba7a;
     }
 }
