@@ -81,8 +81,18 @@
     }
 
     &__nav {
+        position: relative;
         margin-bottom: 20px;
         transition: all .8s;
+        &:not(:last-child):before{
+            content: "";
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            bottom: 0;
+            height: 1px;
+            background: #F0F3F6;
+        }
         .sidebar__item{
             margin-top: 5px;
         }
@@ -193,37 +203,24 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        height: 72px;
-        padding: 0 20px;
+        padding: 5px 20px;
         -webkit-transition: padding .2s;
         -o-transition: padding .2s;
         transition: padding .2s;
         border-top: 1px solid #E4E4E4;
     }
+
+    &__profile-img{
+        width: 40px;
+        height: 40px;
+    }
+
     &.active &__caption {
         padding-left: 0;
         text-align: center;
         font-size: 14px;
         span{
             display: none;
-        }
-        @include respond-to('desktop-xl') {
-            white-space: nowrap;
-            transition: padding .25s;
-        }
-        @include respond-to('desktop-bp') {
-            padding-left: 0;
-            text-align: center;
-            span {
-                display: none;
-            }
-        }
-        @include respond-to('lg-mobile') {
-            padding-left: 20px;
-            text-align: left;
-            span {
-                display: inline;
-            }
         }
     }
     &.active, &.small {
@@ -265,6 +262,179 @@
     &.small.active &__bottom {
         padding: 0 20px;
     }
+
+    &__profile {
+        margin-top: 5px;
+    }
+
+    &__details {
+        position: relative;
+        display: none;
+        padding: 20px 10px 33px;
+        margin-bottom: -15px;
+        background: #F7F7F7;
+        border-radius: 12px;
+        transition: all .5s;
+        &.show{
+            display: block;
+            transition: all .5s;
+        }
+    }
+
+    &__details:before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 72px;
+        height: 4px;
+        border-radius: 2px;
+        background: #E4E4E4;
+    }
+
+    &__link {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 56px;
+        border-radius: 12px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #808191;
+        -webkit-transition: all .25s;
+        -o-transition: all .25s;
+        transition: all .25s;
+    }
+
+    &__link:hover {
+        background: #ffffff;
+        -webkit-box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.04);
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    &__link &__icon {
+        width: 50px;
+        margin: 0;
+        padding-right: 6px;
+        text-align: center;
+        -webkit-transition: all .25s;
+        -o-transition: all .25s;
+        transition: all .25s;
+    }
+
+    &__img {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 50px;
+        height: 56px;
+        padding-right: 5px;
+    }
+
+    &__img .icon {
+        font-size: 19px;
+    }
+
+    &__user {
+        position: relative;
+        z-index: 2;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 20px;
+        height: 62px;
+        border-radius: 12px;
+        color: #11142D;
+        cursor: pointer;
+        -webkit-transition: background .25s;
+        -o-transition: background .25s;
+        transition: background .25s;
+    }
+
+    &__user:hover, &__user.active {
+        background: #3F8CFF;
+        color: #ffffff;
+    }
+
+    &__user:hover &__status, &__user.active &__status {
+        color: #ffffff;
+    }
+
+    &__user:hover .icon, &__user.active .icon {
+        fill: #ffffff;
+    }
+
+    &__ava {
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        font-size: 0;
+    }
+
+    &__ava &__pic {
+        width: 100%;
+        min-height: 100%;
+        border-radius: 50%;
+    }
+
+    &__arrow {
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+    }
+
+    &__arrow .icon {
+        font-size: 16px;
+        fill: #11142D;
+    }
+
+    &__desc {
+        padding: 0 10px 0 10px;
+    }
+
+    &__man {
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 16px;
+        line-height: 1.42857;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+    &__status {
+        font-size: 14px;
+        text-transform: lowercase;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 1;
+        color: #808191;
+    }
+
+    &.active &__arrow,
+    &.active &__desc{
+        display: none;
+    }
+
 }
 @include respond-to('desktop-xl'){
     .sidebar {
@@ -315,6 +485,21 @@
     }
     .sidebar.active .sidebar__bottom {
         padding: 0 20px;
+    }
+    .sidebar.active .sidebar__caption {
+        text-align: left;
+        padding-left: 20px;
+        span{
+            display: inline-block;
+        }
+    }
+    .sidebar .sidebar__arrow,
+    .sidebar .sidebar__desc{
+        display: none;
+    }
+    .sidebar.active .sidebar__arrow,
+    .sidebar.active .sidebar__desc{
+        display: block;
     }
 }
 
