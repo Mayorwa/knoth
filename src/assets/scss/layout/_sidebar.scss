@@ -4,19 +4,12 @@
     left: 0;
     bottom: 0;
     z-index: 15;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     width: 255px;
     background: #ffffff;
     border-right: 1px solid #E4E4E4;
     padding: 132px 20px 72px;
-    -webkit-transition: width .2s;
-    -o-transition: width .2s;
     transition: width .2s;
 
     &__head {
@@ -24,14 +17,8 @@
         top: 0;
         left: 0;
         right: 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: space-around;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         height: 132px;
         padding-top: 12px;
@@ -70,11 +57,7 @@
         flex-direction: column;
         overflow: auto;
         -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
         flex-grow: 1;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
         &::-webkit-scrollbar {
             display: none;
         }
@@ -114,11 +97,7 @@
         }
     }
     &__item {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         height: 56px;
         padding: 0 20px;
@@ -126,8 +105,6 @@
         white-space: nowrap;
         font-weight: 600;
         color: #808191;
-        -webkit-transition: all .4s;
-        -o-transition: all .4s;
         transition: all .4s;
     }
 
@@ -149,16 +126,9 @@
 
     &__icon {
         position: relative;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -ms-flex-negative: 0;
         flex-shrink: 0;
         width: 24px;
         height: 24px;
@@ -197,15 +167,9 @@
         left: 0;
         right: 0;
         bottom: 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         padding: 5px 20px;
-        -webkit-transition: padding .2s;
-        -o-transition: padding .2s;
         transition: padding .2s;
         border-top: 1px solid #E4E4E4;
     }
@@ -230,7 +194,6 @@
 
     &.small.active {
         width: 255px;
-        -webkit-box-shadow: 5px 0 40px rgba(0, 0, 0, 0.1);
         box-shadow: 5px 0 40px rgba(0, 0, 0, 0.1);
     }
 
@@ -286,8 +249,6 @@
         position: absolute;
         top: 8px;
         left: 50%;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
         transform: translateX(-50%);
         width: 72px;
         height: 4px;
@@ -296,26 +257,19 @@
     }
 
     &__link {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         height: 56px;
         border-radius: 12px;
         font-size: 14px;
         font-weight: 600;
         color: #808191;
-        -webkit-transition: all .25s;
-        -o-transition: all .25s;
         transition: all .25s;
     }
 
     &__link:hover {
         background: #ffffff;
-        -webkit-box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.04);
-        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.04);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.04);
     }
 
     &__link &__icon {
@@ -329,14 +283,8 @@
     }
 
     &__img {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         width: 50px;
         height: 56px;
@@ -350,19 +298,13 @@
     &__user {
         position: relative;
         z-index: 2;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         padding: 0 20px;
         height: 62px;
         border-radius: 12px;
         color: #11142D;
         cursor: pointer;
-        -webkit-transition: background .25s;
-        -o-transition: background .25s;
         transition: background .25s;
     }
 
@@ -380,7 +322,6 @@
     }
 
     &__ava {
-        -ms-flex-negative: 0;
         flex-shrink: 0;
         width: 40px;
         height: 40px;
@@ -410,7 +351,6 @@
 
     &__man {
         overflow: hidden;
-        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         white-space: nowrap;
         font-size: 16px;
@@ -423,7 +363,6 @@
         font-size: 14px;
         text-transform: lowercase;
         overflow: hidden;
-        -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
         white-space: nowrap;
         line-height: 1;
@@ -454,8 +393,6 @@
         display: none;
     }
     .sidebar__toggle svg {
-        -webkit-transform: scale(-1, 1);
-        -ms-transform: scale(-1, 1);
         transform: scale(-1, 1);
     }
     .sidebar__item {
@@ -469,15 +406,12 @@
     }
     .sidebar.active {
         width: 255px;
-        -webkit-box-shadow: 5px 0 40px rgba(0, 0, 0, 0.1);
         box-shadow: 5px 0 40px rgba(0, 0, 0, 0.1);
     }
     .sidebar.active .sidebar__logo {
         display: inline-block;
     }
     .active .sidebar__toggle svg {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
         transform: scale(1);
     }
     .sidebar.active .sidebar__item {
@@ -507,11 +441,7 @@
     .sidebar {
         width: 255px;
         padding-bottom: 90px;
-        -webkit-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
         transform: translateX(-100%);
-        -webkit-transition: all .2s;
-        -o-transition: all .2s;
         transition: all .2s;
     }
     .sidebar__head .sidebar__close {
@@ -530,14 +460,10 @@
         padding: 0 20px;
     }
     .sidebar.active {
-        -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
         transform: translateX(0);
-        -webkit-box-shadow: none;
         box-shadow: none;
     }
     .sidebar.small.active {
-        -webkit-box-shadow: none;
         box-shadow: none;
     }
 }
