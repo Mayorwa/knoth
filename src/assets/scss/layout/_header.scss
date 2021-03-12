@@ -116,7 +116,6 @@
 
 .menu-nav{
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     margin: 0 auto;
 }
@@ -419,8 +418,6 @@
                     content: attr(data-text);
                     background: linear-gradient(90deg, #32ffc5 30%, #54d0ea 100%);
                     background-size: 100%;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
                     opacity: 0;
                     transition: opacity 0.3s $ease-out-quad;
                     white-space: nowrap;
@@ -525,8 +522,6 @@
     position: relative;
     z-index: 10;
     display: none;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     padding: 48px 64px 36px;
     @include respond-to('desktop-xl'){

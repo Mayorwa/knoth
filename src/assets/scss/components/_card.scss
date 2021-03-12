@@ -12,7 +12,6 @@
     height: 24px;
     border-radius: 50%;
     background: #ffffff;
-    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.146143);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.146143);
     text-align: center;
     cursor: pointer;
@@ -21,8 +20,6 @@
 .card__next .icon {
     font-size: 10px;
     fill: #11142D;
-    -webkit-transition: fill .2s;
-    -o-transition: fill .2s;
     transition: fill .2s;
 }
 
@@ -72,14 +69,8 @@
 }
 
 .card__head {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 24px;
 }
@@ -89,23 +80,14 @@
 }
 
 .card__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     padding-top: 20px;
 }
 
 .card__icon, .card__arrow {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 40px;
     height: 40px;
@@ -117,28 +99,18 @@
 }
 
 .card__arrow .icon {
-    -webkit-transition: fill .2s;
-    -o-transition: fill .2s;
     transition: fill .2s;
 }
 
 .card__details {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
     padding-bottom: 20px;
     border-bottom: 1px solid #E4E4E4;
 }
 
 .card__line {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 4px;
 }
@@ -168,11 +140,7 @@
 }
 
 .card__view {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     margin-top: 26px;
     font-weight: 600;
@@ -210,15 +178,8 @@
 }
 
 .card__filters {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
     margin-bottom: 32px;
 }
@@ -237,8 +198,6 @@
 }
 
 .card__btns {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin: 0 -4px;
 }
@@ -248,8 +207,6 @@
 }
 
 .card__btns .card__btn {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
     min-width: auto;
     margin: 0 4px;
@@ -264,8 +221,6 @@
     line-height: 1.42857;
     font-weight: 700;
     color: #808191;
-    -webkit-transition: color .2s;
-    -o-transition: color .2s;
     transition: color .2s;
 }
 
@@ -305,7 +260,6 @@
     bottom: -32px;
     z-index: -2;
     background: #E4E4E4;
-    -webkit-filter: blur(86.985px);
     filter: blur(86.985px);
 }
 
