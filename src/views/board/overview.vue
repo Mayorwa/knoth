@@ -5,7 +5,7 @@
                 <div class="page__title h6">Overview</div>
             </div>
             <div class="page_description">
-                shorten your link and protect your browser history
+                shorten your link and protect your history
             </div>
             <hr class="page__hr">
         </div>
