@@ -11,7 +11,7 @@
                 </div>
                 <div class="login__form-div">
                     <div class="login__form">
-                        <a class="login__logo"><img src="@/assets/img/logo/logo_flag_navy.svg" alt=""></a>
+                        <a class="login__logo"><img src="@/assets/img/logo/logo_hero_navy.svg" alt=""></a>
                         <div class="login__stage h5">Sign in to your account</div>
                         <p class="login__form-desc">input your details</p>
                         <div class="login__field">
@@ -37,10 +37,10 @@
                         <a class="login__btn button button--blue-white button_wide">
                             <span>Sign in to your account</span>
                             <span>
-                            <svg width="20px" height="20px" class="icon icon-link">
-                                <use xlink:href="/sprite.svg#icon-arrow-right"></use>
-                            </svg>
-                        </span>
+                                <svg width="20px" height="20px" class="icon icon-link">
+                                    <use xlink:href="/sprite.svg#icon-arrow-right"></use>
+                                </svg>
+                            </span>
                         </a>
                         <div class="login__social-text">
                             <div class="login__text">Or sign in with your social account</div>
@@ -57,3 +57,15 @@
         </div>
     </div>
 </template>
+<style lang="scss">
+    ::-webkit-scrollbar {
+        width: 8px;
+        background-color: #F5F5F5;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: #F5F5F5;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(128, 129, 145, 0.3);
+    }
+</style>
