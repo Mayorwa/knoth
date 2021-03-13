@@ -6,12 +6,64 @@
             </div>
             <div class="login__col login__signup-img"></div>
             <div class="login__col login-form">
-                <div class="login-form__signup">
-                    <a href="/sign-in">sign in to your account</a>
+                <div class="login__steps">
+<!--                    <div class="login__steps-wizard">
+                        <svg width="24px" height="24px" class="icon icon-back">
+                            <use xlink:href="/sprite.svg#icon-arrow-left"></use>
+                        </svg>
+                        <div class="steps">
+                            <ul>
+                                <li class="active">
+                                    <span></span>
+                                    Personal
+                                </li>
+                                <li>
+                                    <span></span>
+                                    Company
+                                </li>
+                                <li>
+                                    <span></span>
+                                    Account
+                                </li>
+                                <li>
+                                    <span></span>
+                                    Complete
+                                </li>
+                            </ul>
+                        </div>
+                    </div>-->
+                    <div class="login-form__signup">
+                        <a href="/sign-in">sign in to your account</a>
+                    </div>
                 </div>
                 <div class="login__form-div">
                     <div class="login__form">
                         <a class="login__logo"><img src="@/assets/img/logo/logo_hero_navy.svg" alt=""></a>
+                        <div class="login__steps-wizard">
+                            <svg width="24px" height="24px" class="icon icon-back">
+                                <use xlink:href="/sprite.svg#icon-arrow-left"></use>
+                            </svg>
+                            <div class="steps">
+                                <ul>
+                                    <li class="active">
+                                        <span></span>
+                                        Personal
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                        Company
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                        Account
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                        Complete
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="login__stage h5">Your personal  details </div>
                         <p class="login__form-desc">Fill up your account details</p>
                         <div class="login__field">

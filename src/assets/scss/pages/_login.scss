@@ -19,7 +19,8 @@
     .login-form__signup{
         text-align: right;
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        width: 100%;
         a{
             color: #2c4ed6;
         }
@@ -196,6 +197,78 @@
     text-decoration: underline;
 }
 
+.login__steps{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+.login__steps-wizard{
+    display: flex;
+}
+.steps {
+    overflow: hidden;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            float: left;
+            color: rgba(128,129,145, 0.4);
+            padding: 0 15px;
+            position: relative;
+            cursor: pointer;
+            width: 140px;
+            text-align: center;
+            &:hover,
+            &.active {
+                color: #355DFF;
+                span{
+                    background: #355DFF;
+                    color: rgba(128,129,145, 0.2)
+                }
+                &::after{
+                    background: #355DFF;
+                    width: 100%
+                }
+            }
+            &::before,
+            &::after{
+                content: "";
+                position: absolute;
+                left: -48%;
+                top: 4px;
+                width: 96%;
+                height: 3px;
+                background: rgba(128,129,145, 0.15);
+            }
+            &::after{
+                width: 0;
+            }
+            span{
+                display: block;
+                margin: 0 auto 15px;
+                width: 10px;
+                height: 10px;
+                text-align: center;
+                background: rgba(128,129,145, 0.7);
+                font-size: 18px;
+                line-height: 35px;
+                font-weight: 300;
+                color: #000;
+                border-radius: 50%;
+                position: relative;
+                z-index: 1;
+            }
+            &:first-child{
+                    &::before,
+                    &::after{
+                        display: none;
+                    }
+                }
+        }
+    }
+}
+
 @include respond-to('desktop-xl'){
     .login__col {
         padding: 80px 48px;
@@ -222,6 +295,11 @@
     }
 }
 
+@include respond-to('desktop-bp'){
+    .steps ul li{
+        width: 120px;
+    }
+}
 @include respond-to('desktop-l'){
     .login__row {
         justify-content: center;
@@ -247,6 +325,9 @@
     .login__form {
         width: 100%;
     }
+    .steps{
+        margin-bottom: 40px;
+    }
 }
 
 @include respond-to('lg-mobile'){
@@ -255,6 +336,7 @@
     }
     .login__row {
         display: block;
+        padding: 24px 10px;
     }
     .login__col:nth-child(3) {
         width: 100%;
@@ -279,5 +361,16 @@
     }
     .login__links:not(:last-child) {
         margin-bottom: 10px;
+    }
+}
+
+@include respond-to('small-mobile') {
+    .steps ul li {
+        width: fit-content;
+        padding: 0 12px;
+        font-size: 14px;
+    }
+    .login__steps-wizard .icon-back{
+        display: none;
     }
 }
