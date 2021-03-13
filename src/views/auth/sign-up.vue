@@ -11,28 +11,47 @@
                 </div>
                 <div class="login__form-div">
                     <div class="login__form">
-                        <a class="login__logo"><img src="@/assets/img/logo/logo_flag_navy.svg" alt=""></a>
+                        <a class="login__logo"><img src="@/assets/img/logo/logo_hero_navy.svg" alt=""></a>
                         <div class="login__stage h5">Your personal  details </div>
                         <p class="login__form-desc">Fill up your account details</p>
                         <div class="login__field">
-                            <div class="field__label">email address</div>
+                            <div class="field__label">name</div>
                             <div class="field__wrap">
-                                <input class="field__input" type="email" placeholder="e.g dave@gmail.com">
+                                <input class="field__input" type="text" placeholder="e.g john doe">
                             </div>
                         </div>
                         <div class="login__field">
-                            <div class="field__label">password</div>
+                            <div class="field__label">email address</div>
                             <div class="field__wrap">
-                                <input class="field__input" type="password" placeholder="e.g **********">
+                                <input class="field__input" type="email" placeholder="e.g johndoe@gmail.com">
+                            </div>
+                        </div>
+                        <div class="login__field">
+                            <div class="field__label">role</div>
+                            <div class="field__wrap">
+                                <select name="" class="field__input" id="">
+                                    <option value="">
+                                        Software Engineer
+                                    </option>
+                                </select>
                             </div>
                         </div>
                         <a class="login__btn button button--blue-white button_wide">
                             <span>Continue</span>
                             <span>
-                            <svg width="24px" height="24px" class="icon icon-link">
-                                <use xlink:href="/sprite.svg#icon-plus-circle"></use>
-                            </svg>
+                                <svg width="24px" height="24px" class="icon icon-link">
+                                    <use xlink:href="/sprite.svg#icon-plus-circle"></use>
+                                </svg>
+                            </span>
+                        </a>
+                        <div class="login__social-text">
+                            <div class="login__text">Or sign up with your social account</div>
+                        </div>
+                        <a href="" class="login__social-button button button--white-black">
+                        <span>
+                            Sign up with Google
                         </span>
+                            <img src="@/assets/img/google.svg" alt="">
                         </a>
                     </div>
                 </div>
@@ -40,3 +59,15 @@
         </div>
     </div>
 </template>
+<style lang="scss">
+    ::-webkit-scrollbar {
+        width: 8px;
+        background-color: #F5F5F5;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: #F5F5F5;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(128, 129, 145, 0.3);
+    }
+</style>
