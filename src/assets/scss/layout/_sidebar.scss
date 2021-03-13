@@ -171,6 +171,7 @@
         align-items: center;
         padding: 5px 20px;
         transition: padding .2s;
+        background: #FFFFFF;
         border-top: 1px solid #E4E4E4;
     }
 
@@ -402,7 +403,7 @@
         display: none;
     }
     .sidebar__bottom {
-        padding: 0 12px;
+        padding: 0 5px;
     }
     .sidebar.active {
         width: 255px;
@@ -428,11 +429,13 @@
         }
     }
     .sidebar .sidebar__arrow,
-    .sidebar .sidebar__desc{
+    .sidebar .sidebar__desc,
+    .sidebar .sidebar__bottom .sidebar__link .sidebar__text{
         display: none;
     }
     .sidebar.active .sidebar__arrow,
-    .sidebar.active .sidebar__desc{
+    .sidebar.active .sidebar__desc,
+    .sidebar.active .sidebar__bottom .sidebar__link .sidebar__text{
         display: block;
     }
 }

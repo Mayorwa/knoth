@@ -11,7 +11,7 @@
             </button>
             <button class="sidebar__close">
                 <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                    <use xlink:href="/sprite.svg#icon-toggle"></use>
+                    <use xlink:href="/sprite.svg#icon-close"></use>
                 </svg>
             </button>
         </div>
