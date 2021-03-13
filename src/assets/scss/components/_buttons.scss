@@ -74,6 +74,12 @@
         }
     }
 
+    &--white-black, &--white-black:hover {
+        background-color: $white;
+        border: 1px solid hsla(0,0%,89.4%,.8);
+        color: $text-black;
+    }
+
     &--red-white {
         background-color: $text-red;
         border: 2px solid transparent;
@@ -192,6 +198,9 @@
     &--s {
         border-radius: 12px;
         padding: 10px 14px;
+    }
+    &_wide{
+        min-width: 100%;
     }
 }
 
