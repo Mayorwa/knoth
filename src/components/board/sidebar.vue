@@ -2,15 +2,15 @@
     <div class="sidebar">
         <div class="sidebar__head">
             <a class="sidebar__logo">
-                <img class="sidebar__pic sidebar__pic_light" src="@/assets/img/ava-header.png" alt="" />
+                <img class="sidebar__pic sidebar__pic_light" src="@/assets/img/logo/logo_flag_navy.svg" alt="" />
             </a>
             <button class="sidebar__toggle">
-                <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <svg class="icon" width="30px" height="30px" viewBox="0 0 24 24" version="1.1">
                     <use xlink:href="/sprite.svg#icon-toggle"></use>
                 </svg>
             </button>
             <button class="sidebar__close">
-                <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <svg class="icon" width="30px" height="30px" viewBox="0 0 24 24" version="1.1">
                     <use xlink:href="/sprite.svg#icon-close"></use>
                 </svg>
             </button>
