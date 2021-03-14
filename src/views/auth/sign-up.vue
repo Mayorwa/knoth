@@ -7,7 +7,7 @@
             <div class="login__col login__signup-img"></div>
             <div class="login__col login-form">
                 <div class="login__steps">
-<!--                    <div class="login__steps-wizard">
+                    <div class="login__steps-wizard">
                         <svg width="24px" height="24px" class="icon icon-back">
                             <use xlink:href="/sprite.svg#icon-arrow-left"></use>
                         </svg>
@@ -31,7 +31,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>-->
+                    </div>
                     <div class="login-form__signup">
                         <a href="/sign-in">sign in to your account</a>
                     </div>
@@ -39,7 +39,7 @@
                 <div class="login__form-div">
                     <div class="login__form">
                         <a class="login__logo"><img src="@/assets/img/logo/logo_hero_navy.svg" alt=""></a>
-                        <div class="login__steps-wizard">
+                        <div class="login__steps-wizard login__steps-wizard-second">
                             <svg width="24px" height="24px" class="icon icon-back">
                                 <use xlink:href="/sprite.svg#icon-arrow-left"></use>
                             </svg>
