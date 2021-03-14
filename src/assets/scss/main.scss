@@ -1,10 +1,8 @@
 @import 'base/colors';
 @import 'abstracts/global-vars';
-@import 'abstracts/variables';
 @import 'abstracts/breakpoints';
 
 @import 'base/reset';
-@import 'base/cursor';
 @import 'base/typography';
 
 @import 'layout/navigation';
@@ -21,4 +19,4 @@
 
 @import 'pages/page';
 @import 'pages/home';
-@import 'pages/login';
+@import 'pages/auth';
