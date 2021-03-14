@@ -20,27 +20,47 @@ const routes = [
     path: "/board",
     name: "board-container",
     component: () => import("@/layouts/board.vue"),
-    redirect: { name: "board-overview", },
+    redirect: { name: "board-analysis", },
     children: [
       {
-        path: 'overview',
-        name: 'board-overview',
-        component: () => import("@/views/board/overview.vue"),
+        path: 'analysis',
+        name: 'board-analysis',
+        component: () => import("@/views/board/analysis.vue"),
       },
       {
-        path: 'links',
-        name: 'board-links',
-        component: () => import("@/views/board/links.vue"),
+        path: 'conversation',
+        name: 'board-conversation',
+        component: () => import("@/views/board/conversation.vue"),
+      },
+      {
+        path: 'task',
+        name: 'board-task',
+        component: () => import("@/views/board/task.vue"),
+      },
+      {
+        path: 'chat',
+        name: 'board-chat',
+        component: () => import("@/views/board/live-chat.vue"),
+      },
+      {
+        path: 'phone',
+        name: 'board-phone',
+        component: () => import("@/views/board/phone.vue"),
+      },
+      {
+        path: 'inbox',
+        name: 'board-inbox',
+        component: () => import("@/views/board/inbox.vue"),
+      },
+      {
+        path: 'meetings',
+        name: 'board-meetings',
+        component: () => import("@/views/board/meeting.vue"),
       },
       {
         path: 'notifications',
         name: 'board-notifications',
         component: () => import("@/views/board/notification.vue"),
-      },
-      {
-        path: 'plan',
-        name: 'board-plan',
-        component: () => import("@/views/board/plan.vue"),
       },
       {
         path: 'settings',

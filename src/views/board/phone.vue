@@ -2,7 +2,7 @@
     <div class="page__container">
         <div>
             <div class="page__head">
-                <div class="page__title h6">Notifications</div>
+                <div class="page__title h6">Phone</div>
             </div>
             <div class="page_description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit

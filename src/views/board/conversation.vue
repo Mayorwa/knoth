@@ -2,10 +2,10 @@
     <div class="page__container">
         <div>
             <div class="page__head">
-                <div class="page__title h6">Overview</div>
+                <div class="page__title h6">Conversations</div>
             </div>
             <div class="page_description">
-                shorten your link and protect your history
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </div>
             <hr class="page__hr">
         </div>
