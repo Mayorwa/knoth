@@ -1,17 +1,27 @@
 <template>
     <div class="header header_border">
-        <div class="header__profile">
-            <a class="header__profile-img">
-                <img src="@/assets/img/avatar/ava-5.png" alt="" />
-            </a>
-            <svg class="icon" width="27px" height="27px" viewBox="0 0 24 24" version="1.1">
-                <use xlink:href="/sprite.svg#icon-angle-down-double"/>
-            </svg>
-        </div>
-        <div class="header__add">
-            <svg class="icon" width="27px" height="27px" viewBox="0 0 24 24" version="1.1">
-                <use xlink:href="/sprite.svg#icon-plus-box"/>
+        <div class="header__toggle">
+            <svg class="icon" width="30px" height="30px" viewBox="0 0 24 24" version="1.1">
+                <use xlink:href="/sprite.svg#icon-toggle"/>
             </svg>
         </div>
     </div>
 </template>
+<script>
+    import $ from 'jquery';
+
+    export default {
+        mounted(){
+            var page = $('.page'),
+                sidebar = $('.sidebar'),
+                headerToggle = $('.header__toggle');
+
+            headerToggle.on('click', function () {
+                sidebar.addClass('active');
+                page.addClass('toggle');
+                $('body').addClass('no-scroll');
+                $('html').addClass('no-scroll');
+            });
+        }
+    }
+</script>

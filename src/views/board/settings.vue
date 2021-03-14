@@ -5,7 +5,7 @@
                 <div class="page__title h6">Settings</div>
             </div>
             <div class="page_description">
-                shorten your link and protect your browser history
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </div>
             <hr class="page__hr">
         </div>

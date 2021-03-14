@@ -524,13 +524,9 @@
     display: none;
     align-items: center;
     padding: 48px 64px 36px;
+    height: 80px;
     @include respond-to('desktop-xl'){
         padding: 48px 48px 36px;
-    }
-    &__add{
-        .icon{
-            color: $green-3;
-        }
     }
 }
 

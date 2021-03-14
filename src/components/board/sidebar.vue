@@ -2,15 +2,15 @@
     <div class="sidebar">
         <div class="sidebar__head">
             <a class="sidebar__logo">
-                <img class="sidebar__pic sidebar__pic_light" src="@/assets/img/ava-header.png" alt="" />
+                <img class="sidebar__pic sidebar__pic_light" src="@/assets/img/logo/logo_flag_navy.svg" alt="" />
             </a>
             <button class="sidebar__toggle">
-                <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <svg class="icon" width="30px" height="30px" viewBox="0 0 24 24" version="1.1">
                     <use xlink:href="/sprite.svg#icon-toggle"></use>
                 </svg>
             </button>
             <button class="sidebar__close">
-                <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <svg class="icon" width="30px" height="30px" viewBox="0 0 24 24" version="1.1">
                     <use xlink:href="/sprite.svg#icon-close"></use>
                 </svg>
             </button>
@@ -18,7 +18,7 @@
         <div class="sidebar__body">
             <div class="sidebar__caption">work<span> tools</span></div>
             <nav class="sidebar__nav">
-                <a href="/board/overview" :class="routeName === 'board-overview' ? 'active' : ''" class="sidebar__item">
+                <a href="/board/analysis" :class="routeName === 'board-analysis' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                             <use xlink:href="/sprite.svg#icon-analytics"></use>
@@ -26,7 +26,7 @@
                     </div>
                     <div class="sidebar__text">Analysis</div>
                 </a>
-                <a href="/board/links" :class="routeName === 'board-links' ? 'active' : ''" class="sidebar__item">
+                <a href="/board/conversation" :class="routeName === 'board-conversation' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                             <use xlink:href="/sprite.svg#icon-group-chat"></use>
@@ -34,7 +34,7 @@
                     </div>
                     <div class="sidebar__text">conversations</div>
                 </a>
-                <a href="/board/meetings" :class="routeName === 'board-meeting' ? 'active' : ''" class="sidebar__item">
+                <a href="/board/meetings" :class="routeName === 'board-meetings' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                             <use xlink:href="/sprite.svg#icon-video"></use>
@@ -45,7 +45,7 @@
             </nav>
             <div class="sidebar__caption">customer</div>
             <nav class="sidebar__nav">
-                <a href="/board/links" :class="routeName === 'board-links' ? 'active' : ''" class="sidebar__item">
+                <a href="/board/task" :class="routeName === 'board-task' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                             <use xlink:href="/sprite.svg#icon-clipboard"></use>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="sidebar__text">task</div>
                 </a>
-                <a href="/board/links" :class="routeName === 'board-links' ? 'active' : ''" class="sidebar__item">
+                <a href="/board/chat" :class="routeName === 'board-chat' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                             <use xlink:href="/sprite.svg#icon-chat"></use>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="sidebar__text">live chat</div>
                 </a>
-                <a href="/board/meetings" :class="routeName === 'board-meeting' ? 'active' : ''" class="sidebar__item">
+                <a href="/board/phone" :class="routeName === 'board-phone' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                             <use xlink:href="/sprite.svg#icon-phone"></use>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="sidebar__text">phone</div>
                 </a>
-                <a href="/board/meetings" :class="routeName === 'board-meeting' ? 'active' : ''" class="sidebar__item">
+                <a href="/board/inbox" :class="routeName === 'board-inbox' ? 'active' : ''" class="sidebar__item">
                     <div class="sidebar__icon">
                         <svg class="icon" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                             <use xlink:href="/sprite.svg#icon-mailbox"></use>
