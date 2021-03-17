@@ -1,13 +1,89 @@
 <template>
     <div class="page__container">
-        <div>
-            <div class="page__head">
-                <div class="page__title h6">Meetings</div>
+        <div class="page__row">
+            <div class="page__col">
+                <div class="page__head">
+                    <button class="button page__back">
+                        <svg class="icon" width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
+                            <use xlink:href="/sprite.svg#icon-angle-left"></use>
+                        </svg>
+                    </button>
+                    <div class="page__title d-flex"><p>monthly alpha team report and review</p> <span class="pill pill--blue">
+                        <svg class="icon" width="16px" height="16px" viewBox="0 0 24 24" version="1.1">
+                            <use xlink:href="/sprite.svg#icon-group"></use>
+                        </svg>
+                        Team
+                    </span></div>
+                </div>
+                <hr class="page__hr">
+                <div class="page__video">
+                    <div class="video__container">
+                        <video autoplay src="@/assets/video/meet.mp4"></video>
+                    </div>
+                    <div class="video__row">
+                        <div class="video__control">
+                            <div class="video__control-volume">
+                                <button class="volume__button">
+                                    <input id="volume__slider" class="volume__slider" min="0" max="60" type="range" value="30" />
+                                    <svg class="icon" width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
+                                        <use xlink:href="/sprite.svg#icon-volume-low"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="video__control-btns">
+                                <div class="video__control-icon-expand">
+                                    <button>
+                                        <svg class="icon" width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
+                                            <use xlink:href="/sprite.svg#icon-expand"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="video__control-icon-mic">
+                                    <button>
+                                        <svg class="icon" width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
+                                            <use xlink:href="/sprite.svg#icon-mic"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="video__control-icon-ended">
+                                    <button>
+                                        <svg class="icon" width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
+                                            <use xlink:href="/sprite.svg#icon-call-ended"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="video__control-icon-video">
+                                    <button>
+                                        <svg class="icon" width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
+                                            <use xlink:href="/sprite.svg#icon-video"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="video__control-icon-settings">
+                                    <button>
+                                        <svg class="icon" width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
+                                            <use xlink:href="/sprite.svg#icon-settings"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="page_description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            <div class="page__col">
+
             </div>
-            <hr class="page__hr">
         </div>
     </div>
 </template>
+<script>
+    export default {
+        mounted(){
+            document.getElementById("volume__slider").oninput = function() {
+                var value = (this.value-this.min)/(this.max-this.min)*100;
+                this.style.background = 'linear-gradient(to right, #355DFF 0%, #355DFF ' + value + '%, #fff ' + value + '%, white 100%)'
+            };
+        }
+    }
+</script>
