@@ -18,7 +18,7 @@
                 <hr class="page__hr">
                 <div class="page__video">
                     <div class="video__container">
-                        <video autoplay src="@/assets/video/meet2.mp4"></video>
+                        <video autoplay src="@/assets/video/meet2.mp4" loop></video>
                     </div>
                     <div class="video__row">
                         <div class="video__control">
@@ -99,7 +99,7 @@
             }
             document.getElementById("volume__slider").oninput = function() {
                 var value = (this.value-this.min)/(this.max-this.min)*100;
-                this.style.background = 'linear-gradient(to right, #355DFF 0%, #355DFF ' + value + '%, #fff ' + value + '%, white 100%)';
+                this.style.background = 'linear-gradient(0deg, #355DFF 0%, #355DFF ' + value + '%, #fff ' + value + '%, white 100%)';
                 setVolume(value / 100);
 
             };
